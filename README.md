@@ -1,5 +1,5 @@
 # Stripe-checkout-datasource
-This is a readme for your new Budibase plugin.
+Official Stripe docs here: https://stripe.com/docs/api/checkout/sessions/object?lang=node
 
 # Description
 CRUD operations for Stripe checkout sessions
