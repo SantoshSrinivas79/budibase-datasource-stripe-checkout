@@ -1,0 +1,90 @@
+{
+  "type": "datasource",
+  "metadata": {},
+  "schema": {
+    "docs": "https://stripe.com/docs/api/checkout/sessions",
+    "friendlyName": "Stripe checkout",
+    "type": "API",
+    "description": "Performs CRUD operations for Stripe checkout sessions",
+    "datasource": {
+      "apiKey": {
+        "type": "password",
+        "required": true
+      }
+    },
+    "query": {
+      "create": {
+        "type": "fields",
+        "fields": {
+          "cancelUrl": {
+            "display": "Cancel URL",
+            "type": "string",
+            "required": true
+          },
+          "successUrl": {
+            "display": "Success URL",
+            "type": "string",
+            "required": true
+          },
+          "mode": {
+            "display": "Mode",
+            "type": "string",
+            "required": true
+          },
+          "additionalParams": {
+            "display": "Additional parameters",
+            "type": "json",
+            "required": false
+          }
+        }
+      },
+      "read": {
+        "type": "fields",
+        "fields": {
+          "id": {
+            "type": "string",
+            "required": true
+          }
+        }
+      },
+      "list": {
+        "type": "json"
+      },
+      "update": {
+        "type": "json"
+      },
+      "delete": {
+        "type": "fields",
+        "fields": {
+          "id": {
+            "type": "string",
+            "required": true
+          }
+        }
+      },
+      "listLineItems": {
+        "type": "fields",
+        "fields": {
+          "id": {
+            "type": "string",
+            "required": true
+          },
+          "endingBefore": {
+            "display": "Ending before",
+            "type": "string",
+            "required": false
+          },
+          "startingAfter": {
+            "display": "Starting after",
+            "type": "string",
+            "required": false
+          },
+          "limit": {
+            "type": "number",
+            "required": false
+          }
+        }
+      }
+    }
+  }
+}
